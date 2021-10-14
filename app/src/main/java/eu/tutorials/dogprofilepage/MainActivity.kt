@@ -17,8 +17,7 @@ class MainActivity : ComponentActivity() {
             DogProfilePageTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(color = MaterialTheme.colors.background) {
-                    //Todo 3: Call the MYApp function for Application first Screen
-                  // MyApp()
+                   ProfilePage()
                 }
             }
         }
