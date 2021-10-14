@@ -18,29 +18,9 @@ class MainActivity : ComponentActivity() {
                 // A surface container using the 'background' color from the theme
                 Surface(color = MaterialTheme.colors.background) {
                     //Todo 3: Call the MYApp function for Application first Screen
-                   MyApp()
+                  // MyApp()
                 }
             }
         }
-    }
-}
-
-//Todo 1 create a new compose function and call the Greeting function
-@Composable
-fun MyApp(){
-    Greeting("Welcome To Tutorials.eu")
-}
-
-@Composable
-fun Greeting(name: String) {
-    Text(text = "Hello $name!")
-}
-
-@Preview(showBackground = true)
-@Composable
-fun DefaultPreview() {
-    DogProfilePageTheme {
-        //Todo 2: call the MyApp function for preview
-        MyApp()
     }
 }
