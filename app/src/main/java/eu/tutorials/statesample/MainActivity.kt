@@ -34,6 +34,11 @@ fun Greeting() {
     var nameState by remember{
         mutableStateOf("")
     }
+    //Todo 11: create a remember variable to hold data for when button is clicked
+
+    var name by remember{
+        mutableStateOf("")
+    }
     //Todo 2: Add a column composable to arrange the composables vertically
     //Todo 3: Add horizontal alignment to center the elements horizontally
     //Todo 4: Add modifier and set to fill max width
@@ -42,8 +47,9 @@ fun Greeting() {
     Column(horizontalAlignment = Alignment.CenterHorizontally,
         modifier = Modifier.fillMaxSize(),
         verticalArrangement = Arrangement.Center){
-        //Todo 10: set the text to Text element
-        Text(text = "Hello $nameState" )
+        //Todo 10: set nameState to Text element
+        //Todo 13: set name to Text element
+        Text(text = "Hello $name" )
         //Todo 7:Add spacer with height for spaces between elements
         Spacer(modifier = Modifier.height(20.dp))
         //Todo 9: pass in collect changed value with namestate
@@ -52,6 +58,8 @@ fun Greeting() {
         } )
         Spacer(modifier = Modifier.height(20.dp))
         Button(onClick = {
+            //Todo 12: reassign the value from TextField to it when the button is clicked
+            name = nameState
         }) {
             Text(text = "Display")
         }
