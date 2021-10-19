@@ -39,9 +39,12 @@ fun Greeting() {
     Column(horizontalAlignment = Alignment.CenterHorizontally,
         modifier = Modifier.fillMaxSize(),
         verticalArrangement = Arrangement.Center){
-        Text(text = "" )
+        Text(text = "Hello" )
+        //Todo 7:Add spacer with height for spaces between elements
+        Spacer(modifier = Modifier.height(20.dp))
         TextField(value ="", onValueChange = {
         } )
+        Spacer(modifier = Modifier.height(20.dp))
         Button(onClick = {
         }) {
             Text(text = "Display")
