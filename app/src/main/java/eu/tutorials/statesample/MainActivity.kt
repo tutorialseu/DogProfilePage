@@ -35,8 +35,8 @@ fun Greeting() {
         mutableStateOf("")
     }
     //Todo 11: create a remember variable to hold data for when button is clicked
-
-    var name by remember{
+//Todo 14:change to remember saveable so the data can survive configuration changes
+    var name by rememberSaveable{
         mutableStateOf("")
     }
     //Todo 2: Add a column composable to arrange the composables vertically
