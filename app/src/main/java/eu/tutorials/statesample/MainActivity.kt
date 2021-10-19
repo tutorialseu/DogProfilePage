@@ -32,7 +32,13 @@ class MainActivity : ComponentActivity() {
 fun Greeting() {
 
     //Todo 2: Add a column composable to arrange the composables vertically
-    Column{
+    //Todo 3: Add horizontal alignment to center the elements horizontally
+    //Todo 4: Add modifier and set to fill max width
+    //Todo 5: Add vertical arrangement to center element vertically
+    //Todo 6: change fill max width to fill max size to cover for height and width
+    Column(horizontalAlignment = Alignment.CenterHorizontally,
+        modifier = Modifier.fillMaxSize(),
+        verticalArrangement = Arrangement.Center){
         Text(text = "" )
         TextField(value ="", onValueChange = {
         } )
