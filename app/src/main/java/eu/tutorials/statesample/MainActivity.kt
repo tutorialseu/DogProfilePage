@@ -30,7 +30,10 @@ class MainActivity : ComponentActivity() {
 @Composable
 //Todo 1: Create a new compose Activity and change the content of Greeting method
 fun Greeting() {
-
+    //Todo 8: create a variable to be stored in memory with remember
+    var nameState by remember{
+        mutableStateOf("")
+    }
     //Todo 2: Add a column composable to arrange the composables vertically
     //Todo 3: Add horizontal alignment to center the elements horizontally
     //Todo 4: Add modifier and set to fill max width
@@ -39,10 +42,13 @@ fun Greeting() {
     Column(horizontalAlignment = Alignment.CenterHorizontally,
         modifier = Modifier.fillMaxSize(),
         verticalArrangement = Arrangement.Center){
-        Text(text = "Hello" )
+        //Todo 10: set the text to Text element
+        Text(text = "Hello $nameState" )
         //Todo 7:Add spacer with height for spaces between elements
         Spacer(modifier = Modifier.height(20.dp))
-        TextField(value ="", onValueChange = {
+        //Todo 9: pass in collect changed value with namestate
+        TextField(value =nameState, onValueChange = {
+            nameState = it
         } )
         Spacer(modifier = Modifier.height(20.dp))
         Button(onClick = {
